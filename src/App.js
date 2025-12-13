@@ -1,12 +1,11 @@
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
-
+import Header from "./Header";
+import  Home  from "./Home";
+import About from "./About"
 function App() {
   return (
     <BrowserRouter>
-      <nav>
-        <Link to="/">Home</Link> |
-        <Link to="/about">About</Link>
-      </nav>
+    <Header />
 
       <Routes>
         <Route path="/" element={<Home />} />
@@ -16,12 +15,5 @@ function App() {
   );
 }
 
-function Home() {
-  return <h1>Welcome Home</h1>;
-}
-
-function About() {
-  return <h1>This is About Page</h1>;
-}
 
 export default App;
